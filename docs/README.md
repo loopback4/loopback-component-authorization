@@ -1,4 +1,4 @@
-# \${PROJECT_NAME}
+# loopback-component-authorization
 
 ## Product Owner
 
@@ -10,26 +10,21 @@
 
 ## Start Date (UTC)
 
--   \${PROJECT_DATE}
+-   2020-04-21T14:58:39.583Z
 
 ## Question
 
--   \${PROJECT_QUESTION}
+-   How to add HRBAC authorization to loopback application ?
 
 ## Goal
 
--   \${PROJECT_GOAL}
+-   Adding HRBAC authorization model to project
 
 ## Languages and Frameworks
 
-1. **Client**
-    1. **HTML5**
-    2. **CSS3**
-    3. **JavaScript-ES7**
-    4. **React.js**
-2. **Server**
+1. **Server**
     1. **Node.js**
-    2. **Express.js**
+    2. **Loopback 4**
 
 ## SDLC (Software Development Life Cycle)
 
@@ -38,6 +33,6 @@
 ## Links
 
 [Trello]()
-[Gitlab]()
+[Github](https://github.com/loopback4/loopback-component-authorization)
 
 ## Description
