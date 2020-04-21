@@ -1,6 +1,6 @@
 {
     "name": "loopback-component-authorization",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Loopback component authorization HRBAC",
     "keywords": [
         "loopback-extension",
@@ -11,37 +11,42 @@
         "node": ">=10"
     },
     "scripts": {
-        "build": "lb-tsc",
-        "build:watch": "lb-tsc --watch",
-        "pretest": "npm run clean && npm run build",
-        "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
-        "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js",
-        "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
+        "clean": "lb-clean dist *.tsbuildinfo",
+        "prebuild": "npm run clean",
+        "build": "lb-tsc --outDir dist",
+        "build:watch": "lb-tsc --watch --outDir dist",
+        "start": "node .",
+        "start:watch": "nodemon .",
+        "test": "lb-mocha --allow-console-logs \"test/**/*.test.ts\"",
+        "prepublishOnly": "npm run build"
     },
     "repository": {
-        "type": "git"
+        "type": "git",
+        "url": "https://github.com/loopback4/loopback-component-authorization"
     },
-    "author": "",
-    "license": "",
+    "author": "KoLiBer",
+    "license": "MIT",
     "files": [
         "README.md",
         "index.js",
         "index.d.ts",
-        "dist",
-        "src",
-        "!*/__tests__"
+        "dist"
     ],
     "dependencies": {
         "@loopback/boot": "^2.0.4",
         "@loopback/context": "^3.4.0",
         "@loopback/core": "^2.3.0",
+        "@loopback/repository": "^2.1.1",
+        "@loopback/rest": "^3.2.1",
+        "loopback-component-history": "^0.1.0",
         "tslib": "^1.10.0"
     },
     "devDependencies": {
         "@loopback/build": "^5.0.1",
-        "source-map-support": "^0.5.16",
         "@loopback/testlab": "^3.0.1",
         "@types/node": "^10.17.19",
+        "nodemon": "^2.0.3",
+        "source-map-support": "^0.5.16",
         "typescript": "~3.8.3"
     }
 }
